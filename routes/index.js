@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-route.get('/all', function (req, res, next) {
+router.get('/all', function (req, res, next) {
   Quotes().select().then(function(results) {
     res.json(results)
   })
