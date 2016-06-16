@@ -17,4 +17,10 @@ router.get('/all', function (req, res, next) {
   })
 });
 
+router.get('/random', function (req, res, next) {
+  var id = Math.floor(Math.random() * quotes.length);
+  var q = quotes[id];
+  res.json(q)
+})
+
 module.exports = router;
