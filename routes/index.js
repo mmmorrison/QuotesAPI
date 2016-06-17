@@ -8,7 +8,7 @@ function Quotes() {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect("/all");
+  res.redirect('/all');
 });
 
 router.get('/all', function (req, res, next) {
