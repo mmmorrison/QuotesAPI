@@ -8,8 +8,7 @@ function Quotes() {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Quote().select().then(function(results) {
-    res.json(results)
+  res.redirect('/all')
   })
 });
 
