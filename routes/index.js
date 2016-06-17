@@ -19,21 +19,9 @@ router.get('/all', function (req, res, next) {
 });
 
 router.get('/random/:' + id, function (req, res, next) {
-  Quotes().where('id', req.params.id).first().then(function(results) {
+  Quotes().where(id, req.params.id).first().then(function(results) {
     res.json(results)
   })
 })
 
 module.exports = router;
-// router.get('/:id', function(req, res, next) {
-//   getDB().where('id', req.params.id).first().then(function(results) {
-//     getReviews().where('rest_id', req.params.id).then(function(review_results) {
-//       getHood().then(function(hood_results) {
-//         getEmployees().where('rest_id', req.params.id).then(function(employees) {
-//           res.render('restaurants/show', {restaurants: results, reviews: review_results, neighborhoods: hood_results,
-//             employees: employees});
-//         })
-//       })
-//     })
-//   })
-// });
